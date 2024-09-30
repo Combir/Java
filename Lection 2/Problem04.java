@@ -1,8 +1,7 @@
 import java.util.Scanner;
-class Problem4 {
+class Problem04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
 
         System.out.print("Initial contribution: ");
         double initialContribution = scanner.nextDouble();
@@ -15,15 +14,12 @@ class Problem4 {
 
         double answer = initialContribution;
 
-        // Loop through each year and apply the interest rate
         for(int i = 0; i < numberOfYears; i++) {
             answer += answer * (theInterestRate / 100);
         }
 
-        // Output the final amount
         System.out.println("Final amount: " + answer);
 
-        // Close the scanner to prevent resource leak
         scanner.close();
     }
 }
