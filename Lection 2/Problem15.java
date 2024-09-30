@@ -1,19 +1,26 @@
 import java.util.Scanner;
-class Problem15 {
+public class Problem15 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
-        int b = scanner.nextInt();
-        int c = scanner.nextInt();
-        int d = scanner.nextInt();
+        Scanner in = new Scanner(System.in);
 
-        int max = Math.max(a, c);
-        int min = Math.min(a, c);
-        int max2 = Math.max(b, d);
-        int min2 = Math.min(b, d);
+        System.out.print("Введите цену (рубли копейки): ");
+        int rub = in.nextInt();
+        int pennies = in.nextInt();
+        int price = rub * 100 + pennies;
 
-        System.out.println(max - min);
-        System.out.println(max2 - min2);
+        System.out.print("Введите сумму (рубли копейки): ");
+        rub = in.nextInt();
+        pennies = in.nextInt();
+        int income = rub * 100 + pennies;
+
+        if (income < price) {
+            System.out.println("Ooooops! This item is worth more.");
+        } else {
+            int change = income - price; // Расчет сдачи
+            System.out.println("Сдача: " + (change / 100) + " рублей и " + (change % 100) + " копеек.");
+        }
     }
 }
+
+
 
