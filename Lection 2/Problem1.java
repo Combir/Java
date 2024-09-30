@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Problem13 {
+class Problem1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int year = scanner.nextInt();
@@ -11,7 +11,7 @@ class Problem13 {
             }
         } else {
             System.out.println("ERROR");
+            }
         }
     }
-}
 
